@@ -1,0 +1,25 @@
+﻿@page
+@model Portfolio_Website.Pages.GalleryModel
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+
+<div>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="file" required/>
+            <label>@Model.UploadResult</label>
+            <button class="btn btn-primary" type="submit">Upload</button>
+        </div>       
+    </form>  
+</div>
+
+<div class="gallery">
+    
+    @foreach (string image in Model.imagesFilePath)
+    {
+        <img src="@image" style="max-width: 800px; max-height: 600px;" />
+    }
+
+</div>

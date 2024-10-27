@@ -102,6 +102,7 @@ namespace Portfolio_Website.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -114,7 +115,14 @@ namespace Portfolio_Website.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    if(returnUrl == "/Identity/Account/Logout")
+                    {
+                        return LocalRedirect("/Identity/Account/Manage");
+                    }
+                    else
+                    {
+                        return LocalRedirect(returnUrl);
+                    }                  
                 }
                 if (result.RequiresTwoFactor)
                 {

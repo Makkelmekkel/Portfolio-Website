@@ -18,5 +18,48 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: linear-gradient(to bottom, #283139, #3e4b57);
+    background-color: #283139;
+    color: white;
+}
+
+a, a.nav-link {
+    color: #b3c6d1;
+}
+
+a:hover, a.nav-link:hover {
+    color: #8ea4b7;
+}
+
+.navbar {
+    background-color: #283139 !important;
+    color: white;
+}
+
+.navbar .nav-link, .navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover, .navbar-brand:hover {
+    color: #b3c6d1 !important;
+}
+
+form {
+    border: 2px solid #ccc; /* Set the border color and thickness */
+    border-radius: 10px; /* Adjust the rounding of the corners */
+    padding: 20px; /* Add some space inside the border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    border-color: #759aab;
+    background: #3e4b57;
+    color: #759aab;
+}
+
+.btn {
+    background-color: #283139;
+    border: none
+}
+
+.btn:hover{
+    background-color: #759aab;
 }
